@@ -1,0 +1,453 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--page-font-family), sans-serif;
+  font-size: var(--main-font-size, 18px);
+  padding: 10px;
+  background-image: var(--page-background-image);
+  background-color: var(--page-background-color);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: var(--line-height);
+}
+
+.header__title-rec::before {
+  content: "rec";
+  text-transform: uppercase;
+  color: var(--color-rec);
+  position: absolute;
+  inset-inline-end: 29px;
+  inset-block-start: 0;
+}
+
+.header__title-rec::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 4px 2px var(--color-rec, #ff0070);
+  border-radius: 50%;
+  border: 1px solid var(--color-rec);
+  background-color: var(--color-rec);
+  inset-inline-end: 10px;
+  inset-block-start: 8px;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr max-content 1fr;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding-block-end: 20px;
+  margin-block-end: 30px;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  border-block-start: 1px solid var(--decorated-color);
+  border-inline-end: 1px solid var(--decorated-color);
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-inline-start: 1px solid var(--decorated-color);
+  border-block-end: 1px solid var(--decorated-color);
+  block-size: 25px;
+  inline-size: 25px;
+  inset-block-end: 20px;
+  inset-inline-start: 0;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.header__theme-menu-button {
+  color: var(--button-color);
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 2px 12px 3px 13px;
+  font-weight: 400;
+  line-height: var(--line-height);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-color-button);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--focus-color-button);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border-color: var(--button-color);
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.2%;
+  font-weight: 700;
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-family: var(--page-font-family), sans-serif;
+}
+
+.header__text {
+  block-size: min-content;
+  font-family: var(--page-font-family), sans-serif;
+  font-weight: 700;
+  line-height: var(--line-height);
+  font-size: var(--main-font-size);
+  align-self: center;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--title-article-color);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-block-end: 43px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__title {
+  color: var(--title-page-color);
+  font-family: var(--page-font-family), sans-serif;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 700;
+  line-height: inherit;
+}
+
+.secion__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section__article-title {
+  font-family: var(--page-font-family), sans-serif;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.section__paragraph {
+  color: var(--main-text-color);
+  font-weight: 400;
+  font-family: var(--page-font-family), sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--link-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.how__distance-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__article-title-thin {
+  color: var(--title-article-color);
+  font-family: var(--page-font-family), sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 400;
+}
+
+.section-in-pictures {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.in-pictures__image-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.in-pictures__image-item__block {
+  inline-size: 355px;
+}
+
+.in-pictures__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  display: grid;
+  block-size: 100vh;
+  min-block-size: 667px;
+  padding-block-end: 17px;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.2%;
+  font-weight: 700;
+  color: var(--main-title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  justify-self: center;
+  align-self: center;
+  font-family: var(--page-font-family), sans-serif;
+}
+
+@media (768px <= width < 1024px) {
+  .page {
+    padding: 20px;
+  }
+
+  .header {
+    min-block-size: 1024px;
+    padding-block-end: 39px;
+    margin-block-end: 40px;
+  }
+
+  .main {
+    gap: 80px;
+    margin-block-end: 76px;
+  }
+
+  .header__title {
+    position: relative;
+    inset-inline-end: 20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__text {
+    max-inline-size: 364px;
+    justify-self: end;
+  }
+
+  .decorated-zone::before {
+    inset-block-end: 39px;
+  }
+
+  .why,
+  .how {
+    display: grid;
+    grid-template-columns: fit-content(236px) 1fr;
+  }
+
+  .section__title {
+    max-inline-size: 236px;
+  }
+
+  .section-in-pictures {
+    gap: 15px;
+  }
+
+  .cloud {
+    grid-area: cloud;
+  }
+
+  .food {
+    grid-area: food;
+  }
+
+  .music {
+    grid-area: music;
+  }
+
+  .read {
+    grid-area: read;
+  }
+
+  .walk {
+    grid-area: walk;
+  }
+
+  .in-pictures__image-list {
+    display: grid;
+    grid-template-columns: repeat(3, fit-content);
+    grid-template-rows: repeat(3, fit-content);
+    grid-auto-flow: dense;
+    grid-template-areas:
+      "cloud cloud food"
+      "music read food"
+      "music walk walk";
+    gap: 13px;
+  }
+
+  .footer {
+    min-block-size: 1024px;
+    padding-block-end: 39px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width >= 1024px) {
+  .page {
+    padding: 20px;
+  }
+
+  .header {
+    min-block-size: 768px;
+    padding-block-end: 39px;
+    margin-block-end: 40px;
+  }
+
+  .decorated-zone::before {
+    inset-block-end: 39px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: self-start;
+  }
+
+  .header__theme-menu-button {
+    padding: 0 13px 0 13px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .header__title {
+    position: relative;
+    inset-inline-end: 20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__text {
+    max-inline-size: 491px;
+    justify-self: end;
+  }
+
+  .main {
+    gap: 80px;
+    margin-block-end: 76px;
+  }
+
+  .why,
+  .how {
+    display: grid;
+    grid-template-columns: fit-content(315px) 1fr;
+  }
+
+  .section__title {
+    max-inline-size: 315px;
+  }
+
+  .section-in-pictures {
+    gap: 15px;
+  }
+
+  .what {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .secion__list-what {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cloud {
+    grid-area: cloud;
+  }
+
+  .food {
+    grid-area: food;
+  }
+
+  .music {
+    grid-area: music;
+  }
+
+  .read {
+    grid-area: read;
+  }
+
+  .walk {
+    grid-area: walk;
+  }
+
+  .in-pictures__image-list {
+    display: grid;
+    grid-template-columns: repeat(3, fit-content);
+    grid-template-rows: repeat(3, fit-content);
+    grid-auto-flow: dense;
+    grid-template-areas:
+      "cloud cloud food"
+      "music read food"
+      "music walk walk";
+    gap: 14px;
+  }
+
+  .footer {
+    min-block-size: 768px;
+    padding-block-end: 39px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
